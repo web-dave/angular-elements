@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moin Moin Test Page</title>
+    <script src="moin.js"></script>
+</head>
+
+<body>
+    <moin-moin name="Dave"></moin-moin>
+
+    <script>
+        const moin = document.querySelector('moin-moin');
+        moin.addEventListener('highFife', (event) => {
+            console.log(`"highFife" emitted: ${event.detail}`);
+        })
+        setTimeout(() => moin.name = 'Moin', 3000);
+    </script>
+</body>
+
+</html>
