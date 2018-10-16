@@ -12,17 +12,14 @@
 
 <body>
   <moin-root></moin-root>
-  <moin-moin (highFife)="hiFifeYourself($event)" [name]="'Klaus'"></moin-moin>
+  <moin-moin (highFife)="hiFifeYourself($event)" name="Klaus"></moin-moin>
   <script>
-    let hiFifeYourself = (msg) => {
-      console.log(msg)
-    }
+    const moin = document.querySelector('moin-moin');
+    moin.addEventListener('highFife', (event) => {
+      console.log(`"highFife" emitted: ${event.detail}`);
+    })
+    setTimeout(() => moin.name = 'Moin', 3000);
   </script>
-  <script src="scripts.a8d156b92ea2ded28ebf.js"></script>
-  <script src="runtime.a66f828dca56eeb90e02.js"></script>
-  <!-- <script src="styles.34c57ab7888ec1573f9c.css"></script> -->
-  <script src="polyfills.2f4a59095805af02bd79.js"></script>
-  <script src="main.e7d76770fb2258a9e9bb.js"></script>
 </body>
 
 </html>

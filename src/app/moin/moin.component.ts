@@ -19,12 +19,14 @@ import {
   encapsulation: ViewEncapsulation.Native
 })
 export class MoinComponent implements OnChanges {
-  @Input() name: string;
-  @Output() highFife = new EventEmitter<string>();
+  @Input()
+  name: string;
+  @Output()
+  highFife = new EventEmitter<string>();
   constructor() {}
 
   ngOnChanges(obj) {
-    console.warn(obj);
+    console.warn("ngOnChanges", obj);
   }
 
   hi() {
