@@ -8,7 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postbuild": "cat dist/ce-moin/{runtime,polyfills,scripts,main}**.js > moin.js"
+    "postbuild": "cat dist/ce-moin/{runtime,polyfills,scripts,main}**.js > moin.js",
+    "prehase": "echo PREHASE",
+    "hase": "echo HASE",
+    "posthase": "echo POSTHASE"
   },
   "private": true,
   "dependencies": {

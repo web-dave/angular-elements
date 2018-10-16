@@ -1,18 +1,12 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule, Injector } from "@angular/core";
-import { createCustomElement } from "@angular/elements";
+import { NgModule } from "@angular/core";
 import { MoinComponent } from "./moin/moin.component";
+import { AppComponent } from "./app/app.component";
 
 @NgModule({
-  declarations: [MoinComponent],
+  declarations: [MoinComponent, AppComponent],
   entryComponents: [MoinComponent],
-  imports: [BrowserModule]
+  imports: [BrowserModule],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor(private injector: Injector) {
-    const moinComponent = createCustomElement(MoinComponent, { injector });
-    customElements.define("moin-moin", moinComponent);
-  }
-
-  ngDoBootstrap() {}
-}
+export class AppModule {}
